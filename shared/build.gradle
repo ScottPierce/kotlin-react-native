@@ -1,0 +1,12 @@
+apply plugin: 'kotlin-platform-js'
+
+dependencies {
+    compile deps.kotlin.stdlib.js
+}
+
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.sourceMap = true
+    kotlinOptions.sourceMapEmbedSources = "always"
+    kotlinOptions.moduleKind = 'commonjs'
+}
