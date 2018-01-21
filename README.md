@@ -1,7 +1,7 @@
-### Pull Requests Welcome!!
+## Pull Requests Welcome!!
 
 ## Running the Project on Mac
-1. Install yarn. Skip this if you already have it installed
+1. Install yarn. [Homebrew](https://brew.sh/) for mac is highly recommended. Skip this if you already have it installed
 2. Run `yarn install` to install all the javascript dependencies.
 3. Run `./gradlew -t :shared:assemble` - compiles the Kotlin javascript module located in `./shared`, and watches it for changes. Leave this terminal open. Remove the `-t` argument if you don't want gradle to watch for changes and auto-rebuild.
 4. Open a new terminal window and run `yarn haul start`. After a few seconds, it will prompt you asking which platform to bundle for. Select the `android` platform. Add the `--platform android` parameter to select the android platform automatically.
