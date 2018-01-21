@@ -42,10 +42,6 @@ class ViewBuilder {
 
   private fun addElement(element: dynamic, props: dynamic, style: dynamic, vararg params: dynamic) {
     val _props = props ?: jsObject()
-
-    throw Throwable("Error")
-    println("Style: ${JSON.stringify(style)}")
-
     if (style != null && style != undefined) {
       _props.style = style
     }
