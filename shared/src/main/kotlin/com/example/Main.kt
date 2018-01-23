@@ -15,6 +15,8 @@ fun main(args: Array<String>) {
 
 class HelloWorld : React.Component<Any, Any>() {
   override fun render(): dynamic {
+    throw RuntimeException("Example Crash")
+
     return view {
       text("HelloTest1", Style(backgroundColor = "blue", fontSize = 50))
       button("Button Test!") {
