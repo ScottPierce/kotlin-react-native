@@ -16,8 +16,8 @@ fun main(args: Array<String>) {
 class HelloWorld : React.Component<Any, Any>() {
   override fun render(): dynamic {
     return view {
-      text("HelloTest1", Style(backgroundColor = "blue", fontSize = 50))
-      button("Button Test!") {
+      text("HelloTest1", Style(fontSize = 50))
+      button("Button Test!", color = "green") {
         println("Test Button Clicked!")
       }
       component(SubComponent())
