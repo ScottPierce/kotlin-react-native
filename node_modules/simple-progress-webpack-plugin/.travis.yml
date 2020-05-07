@@ -1,0 +1,43 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+
+branches:
+  only:
+    - master
+    - develop
+    - /^greenkeeper/.*$/
+
+before_install:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      git clone "https://github.com/$TRAVIS_REPO_SLUG.git" "$TRAVIS_REPO_SLUG";
+      cd "$TRAVIS_REPO_SLUG";
+      git checkout -qf "$TRAVIS_COMMIT";
+    fi
+  - npm install -g npm
+install:
+  - npm prune
+  - npm install
+  - npm update
+
+before_deploy:
+  - git config --global user.name "dominique-mueller"
+  - git config --global user.email "dominique.m.mueller@gmail.com"
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://$GH_TOKEN:@github.com" > .git/credentials
+  - git checkout master
+  - npm run automatic-release
+
+deploy:
+  provider: npm
+  email: dominique.m.mueller@gmail.com
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: dominique-mueller/simple-progress-webpack-plugin
+after_deploy:
+  - npm run list-deployed-files

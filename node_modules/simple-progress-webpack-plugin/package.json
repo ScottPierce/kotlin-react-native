@@ -1,0 +1,44 @@
+{
+	"name": "simple-progress-webpack-plugin",
+	"description": "A simple progress plugin for Webpack, coming with four different logging output formats.",
+	"version": "1.1.2",
+	"author": {
+		"name": "Dominique Müller",
+		"email": "dominique.m.mueller@gmail.com",
+		"url": "https://www.devdom.io/"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dominique-mueller/simple-progress-webpack-plugin"
+	},
+	"homepage": "https://github.com/dominique-mueller/simple-progress-webpack-plugin",
+	"bugs": {
+		"url": "https://github.com/dominique-mueller/simple-progress-webpack-plugin/issues"
+	},
+	"keywords": [
+		"webpack",
+		"plugin",
+		"progress",
+		"simple",
+		"logger"
+	],
+	"main": "./index.js",
+	"scripts": {
+		"automatic-release": "automatic-release",
+		"list-deployed-files": "pkgfiles --sort=name"
+	},
+	"dependencies": {
+		"chalk": "2.3.x",
+		"figures": "2.0.x",
+		"log-update": "2.3.x"
+	},
+	"peerDependencies": {
+		"webpack": ">=2.0.0"
+	},
+	"devDependencies": {
+		"automatic-release": "1.1.x",
+		"pkgfiles": "2.3.x",
+		"webpack": "2.7.x"
+	}
+}

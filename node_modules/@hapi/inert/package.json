@@ -1,0 +1,33 @@
+{
+  "name": "@hapi/inert",
+  "description": "Static file and directory handlers plugin for hapi.js",
+  "version": "5.2.2",
+  "repository": "https://github.com/hapijs/inert.git",
+  "main": "lib/index.js",
+  "keywords": [
+    "file",
+    "directory",
+    "handler",
+    "hapi",
+    "plugin"
+  ],
+  "dependencies": {
+    "@hapi/ammo": "3.x.x",
+    "@hapi/boom": "7.x.x",
+    "@hapi/bounce": "1.x.x",
+    "@hapi/hoek": "8.x.x",
+    "@hapi/joi": "16.x.x",
+    "lru-cache": "4.1.x"
+  },
+  "devDependencies": {
+    "@hapi/code": "6.x.x",
+    "@hapi/file": "1.x.x",
+    "@hapi/hapi": "18.x.x",
+    "@hapi/lab": "20.x.x"
+  },
+  "scripts": {
+    "test": "lab -f -a @hapi/code -t 100 -L",
+    "test-cov-html": "lab -f -a @hapi/code -r html -o coverage.html"
+  },
+  "license": "BSD-3-Clause"
+}

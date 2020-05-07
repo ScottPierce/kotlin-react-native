@@ -1,0 +1,6 @@
+module Pods_BehindTheWheel_BehindTheWheelTests {
+  umbrella header "Pods-BehindTheWheel-BehindTheWheelTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
